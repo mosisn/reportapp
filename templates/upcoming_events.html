@@ -11,9 +11,10 @@
     <table class="table">
         <thead class="table-header">
             <tr>
-                <th>Name</th>
-                <th>Date</th>
-                <th>Location</th>
+                <td>Date</td>
+                <td>Name</td>
+                <td>Location</td>
+                <td>Details</td>
             </tr>
         </thead>
         <tbody>
@@ -23,11 +24,14 @@
                 <td class="table-cell">{{ item.name }}</td>
                 <td class="table-cell">{{ item.date|date:"M d, Y" }}</td>
                 <td class="table-cell">{{ item.location }}</td>
+                <td class="table-cell btn-cell">
+                    <a href="{{ item.id }}" class="btn">I am the BUTTON!</a>
+                </td>
             </tr>
             {% endfor %}
             {% else %}
             <tr class="table-row">
-                <td class="table-cell" colspan="3">No data available.</td>
+                <td class="table-cell" colspan="4">No data available.</td>
             </tr>
             {% endif %}
         </tbody>

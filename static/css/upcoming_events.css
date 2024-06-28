@@ -1,3 +1,4 @@
+/* upcoming_events.css */
 .table {
     width: 100%;
     border-collapse: collapse;
@@ -7,24 +8,44 @@
 .table-header {
     background-color: #f2f2f2;
     font-weight: bold;
+    text-align: left;
 }
 
 .table-row {
     border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .table-cell {
     padding: 10px;
+    flex: 1;
+    text-align: right;
 }
 
-.table-row:hover {
-    background-color: #f5f5f5;
+.table-cell.btn-cell {
+    flex-grow: 0;
+    padding-left: 16px;
 }
 
 .past-event {
-    background-color: #fdc0c5; /* Light red background for past events */
+    color: #999;
 }
 
 .upcoming-event {
-    background-color: #c4fae2; /* Light green background for upcoming events */
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
 }
