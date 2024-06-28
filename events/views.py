@@ -14,3 +14,10 @@ def upcoming_events(request):
         'now' : now
     }
     return render(request,'upcoming_events.html', context)
+
+def events_details(request, code):
+    data = Event.objects.get(id=code)
+    context = {
+        'data' : data
+    }
+    return render (request, 'event_detail.html', context)
